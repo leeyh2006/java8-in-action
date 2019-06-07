@@ -1,9 +1,5 @@
 package ch05.quiz;
 
-import ch05.Trader;
-import ch05.Transaction;
-
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 

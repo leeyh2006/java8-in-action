@@ -34,3 +34,30 @@ menu.stream()
     .ifPresent(d->sout(d));
     
 ## reducing
+reduce(0 , (a,b) -> a+b)
+
+
+## Basic Stream
+IntStream, DoubleStream, LongStream
+- mapToInt
+- mapToDouble
+- mapToLong
+
+## boxed
+transfer to basic stream
+Stream<Integer> stream = intStream.boxed();
+
+## Stream.of, Stream.empty
+
+## file to stream
+
+## infinite stream
+Stream.iterate ,Stream.generate
+caution **limit**
+
+
+## stateless operation vs stateful operation
+- stateless operation  
+map,filter etc..
+- stateful operation
+sorted, reduce, etc...

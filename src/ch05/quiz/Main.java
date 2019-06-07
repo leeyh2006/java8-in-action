@@ -1,6 +1,6 @@
-package ch05;
+package ch05.quiz;
 
-import ch04.Dish;
+import ch04.src.Dish;
 
 import java.util.Arrays;
 import java.util.List;
@@ -68,11 +68,21 @@ public class Main {
         int sum = numbers.stream().reduce(0 ,(a,b)->a+b);
 
 
+
+        int calories = menu.stream()
+                .mapToInt(i->i.getCalories())
+                .sum();
+
         System.out.println(sum);
 
 
         Optional<Integer> max = numbers.stream().reduce((a,b)-> a+b);
 
         System.out.println(max);
+
+        Stream.iterate(0,n->n+2)
+                .limit(10)
+                .forEach(System.out::println);
+
     }
 }

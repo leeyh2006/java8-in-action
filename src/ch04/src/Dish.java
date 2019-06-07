@@ -1,4 +1,4 @@
-package ch04;
+package ch04.src;
 
 public class Dish {
     private final int calories;
