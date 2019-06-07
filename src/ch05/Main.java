@@ -4,6 +4,7 @@ import ch04.Dish;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -64,6 +65,14 @@ public class Main {
             System.out.println("haha");
         }
 
+        int sum = numbers.stream().reduce(0 ,(a,b)->a+b);
 
+
+        System.out.println(sum);
+
+
+        Optional<Integer> max = numbers.stream().reduce((a,b)-> a+b);
+
+        System.out.println(max);
     }
 }

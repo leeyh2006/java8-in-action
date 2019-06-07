@@ -1,4 +1,4 @@
-package ch05;
+package ch05.quiz;
 
 import java.util.Arrays;
 import java.util.List;
