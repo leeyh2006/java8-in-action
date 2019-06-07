@@ -1,12 +1,5 @@
 package ch04;
 
-/**
- * Name:Dish
- * Desc :
- * Developer :82108
- * Date : 2019-06-07
- * Time : 오후 7:44
- */
 public class Dish {
     private final int calories;
     private final String name;
