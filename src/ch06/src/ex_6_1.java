@@ -2,10 +2,7 @@ package ch06.src;
 
 import ch04.src.Dish;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -27,6 +24,9 @@ public class ex_6_1 {
                 new Dish(200,"fish",false, Dish.Type.FISH)
         );
 
+        IntSummaryStatistics menuStatics = menu.stream().collect(Collectors.summarizingInt(i->i.getCalories()));
+
+        System.out.println(menuStatics);
 
         Comparator<Dish> dishCaloriesComparator =
                 Comparator.comparingInt(i->i.getCalories());
@@ -36,6 +36,13 @@ public class ex_6_1 {
 
         System.out.println(totalCalories);
 
+//        String shortMenu = menu.stream().map(i->i.getName()).collect(Collectors.joining(","));
+
+        String shortMenu = menu.stream().map(i->i.getName()).collect(Collectors.reducing((i,j)->i+j)).get();
+
+
+
+                System.out.println(shortMenu);
     }
 
 
