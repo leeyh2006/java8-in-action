@@ -20,3 +20,4 @@ combine stream data.
 ```
 
 ## Grouping
+Collectors.grouping(..);

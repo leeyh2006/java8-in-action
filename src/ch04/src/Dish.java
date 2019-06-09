@@ -33,4 +33,13 @@ public class Dish {
         MEAT,FISH,OTHER
     }
 
+    @Override
+    public String toString() {
+        return "Dish{" +
+                "calories=" + calories +
+                ", name='" + name + '\'' +
+                ", vegetarian=" + vegetarian +
+                ", type=" + type +
+                '}';
+    }
 }
