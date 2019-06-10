@@ -16,8 +16,18 @@ summarize class using SummaryStatics
 ## joining
 combine stream data.  
 ``` 
-    String shortMenu = menu.stream().map(i->i.getName()).collect(Collectors.joining(","));
+    String shortMenu = menu
+    .stream()
+    .map(i->i.getName())
+    .collect(Collectors.joining(","));
 ```
 
 ## Grouping
 Collectors.grouping(..);
+
+
+## Collector interface
+- supplier :  return empty Supplier 
+- accumulator : return reducing function 
+- finisher : return accumulated object 
+- combiner : decide to result in parellstream.
